@@ -8,6 +8,10 @@ export default function AddHabitForm({ onAddHabit }) {
   const handleSubmit = (e) => {
     // TODO: write code to handle form submission
     e.preventDefault();
+    if (habitName.trim() === "") {
+      alert("Habit name cannot be empty!");
+      return;
+    }
     const newHabit={
       id: Date.now(), 
       habitName,
