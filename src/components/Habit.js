@@ -12,16 +12,15 @@ export default function Habit({habits,handleDeleteHabit,handleToggleHabit}) {
           <input
             type="checkbox"
             checked={habits.completed}
-            onChange={() => handleUpdateItem(habits.habitName)}
+            onChange={() => handleToggleHabit(habits.habitName)}
           />
           <span
             style={{
-              textDecoration: habit.completed ? "line-through" : "none",
+              textDecoration: habits.completed ? "line-through" : "none",
             }}
           >
           </span>
-          <button onClick={() => handleDeleteHabit(habit.id)}>❌</button>
+          <button onClick={() => handleDeleteHabit(habits.id)}>❌</button>
         </li>
       );
     }
-}
