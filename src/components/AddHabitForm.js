@@ -26,6 +26,7 @@ export default function AddHabitForm({ onAddHabit }) {
         value={habitName} 
         placeholder="Name"
       />
+      <button>ADD</button>
     </form>
   );
 }

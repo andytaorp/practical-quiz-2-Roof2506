@@ -17,13 +17,13 @@ function App() {
     const updatedHabits = habits.map((habits) =>
     habits.id === id ? { ...habits, completed: !habits.completed } : habits
   );
-  setItems(updatedHabits);
+  setHabits(updatedHabits);
   };
 
   const handleDeleteHabit = (id) => {
     // TODO: write code to delete a habit
     const DeleteHabit = habits.filter((habits) => habits.id !== id);
-    setItems(DeleteHabit);
+    setHabits(DeleteHabit);
   };
 
   return (
@@ -32,7 +32,7 @@ function App() {
       {/*TODO: add a form to add a new habit*/}
       <AddHabitForm onAddHabit={handleAddHabit} />
       {/*TODO: add a list of habits*/}
-      <HabitList handleToggleHabit={handleToggleHabit} handleDeleteHabit={handleDeleteHabit}  />
+      {/* <HabitList handleToggleHabit={handleToggleHabit} handleDeleteHabit={handleDeleteHabit}  /> */}
     </div>
   );
 }
