@@ -32,7 +32,7 @@ function App() {
       {/*TODO: add a form to add a new habit*/}
       <AddHabitForm onAddHabit={handleAddHabit} />
       {/*TODO: add a list of habits*/}
-      <HabitList  / >
+      <HabitList handleToggleHabit={handleToggleHabit} handleDeleteHabit={handleDeleteHabit}  />
     </div>
   );
 }

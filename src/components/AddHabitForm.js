@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 export default function AddHabitForm({ onAddHabit }) {
   const [habitName, setHabitName] = useState("");
-
   function handleAddName(e) {
     setHabitName(e.target.value);
   }
@@ -23,7 +22,7 @@ export default function AddHabitForm({ onAddHabit }) {
     <form className="add-form" onSubmit={handleSubmit}>
       <input 
         type="text" 
-        onChange={handleAdd} 
+        onChange={handleAddName} 
         value={habitName} 
         placeholder="Name"
       />

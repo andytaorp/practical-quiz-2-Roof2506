@@ -20,7 +20,7 @@ export default function Habit({habits,handleDeleteHabit,handleToggleHabit}) {
             }}
           >
           </span>
-          <button onClick={() => handleDeleteItem(item.id)}>❌</button>
+          <button onClick={() => handleDeleteHabit(habit.id)}>❌</button>
         </li>
       );
     }
