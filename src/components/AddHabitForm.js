@@ -24,9 +24,9 @@ export default function AddHabitForm({ onAddHabit }) {
         type="text" 
         onChange={handleAddName} 
         value={habitName} 
-        placeholder="Name"
+        placeholder="New Habit"
       />
-      <button>ADD</button>
+      <button>Add Habit</button>
     </form>
   );
 }
