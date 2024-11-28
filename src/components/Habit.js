@@ -17,7 +17,7 @@ export default function Habit({ habit, onDeleteHabit, onToggleHabit }) {
         <span style={{ textDecoration: habit.completed ? "line-through" : "none" }}>
           {habit.habitName}
         </span>
-        <button onClick={() => onDeleteHabit(habit.id)}>❌</button>
+        <button onClick={() => onDeleteHabit(habit.id)}>Delete</button>
       </li>
     );
   }
