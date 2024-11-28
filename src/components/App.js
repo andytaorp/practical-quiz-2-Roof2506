@@ -6,10 +6,10 @@ import Habit from "./Habit";
 function App() {
   const [habits, setHabits] = useState([]);
 
-  const handleAddHabit = (habitName) => {
+  const handleAddHabit = (habit) => {
     // TODO: write code to add a new habit here
-    const AddHabit = [habitName,...habits]
-    setHabits(AddHabit)
+    const newHabits = [habit, ...habits];
+  setHabits(newHabits);
   };
 
   const handleToggleHabit = (id) => {
@@ -32,7 +32,7 @@ function App() {
       {/*TODO: add a form to add a new habit*/}
       <AddHabitForm onAddHabit={handleAddHabit} />
       {/*TODO: add a list of habits*/}
-      {/* <HabitList handleToggleHabit={handleToggleHabit} handleDeleteHabit={handleDeleteHabit}  /> */}
+      <HabitList habits={habits} onToggleHabit={handleToggleHabit} onDeleteHabit={handleDeleteHabit} />
     </div>
   );
 }
